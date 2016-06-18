@@ -237,7 +237,7 @@ function scrollFn() {
 }
 
 function themeFn() {
-    var themes = ["base-theme", "trontastic", "darkice", "shadowfire"];
+    var themes = ["base-theme", "trontastic", "darkice", "shadowfire", "swanky"];
     var curr = "";
     
     if (!localStorage.getItem("theme")) {
