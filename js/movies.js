@@ -258,7 +258,7 @@ function themeFn() {
     $("body *").addClass(localStorage.getItem("theme"));
     
     for (t in themes) {
-        $("head").append("<link href='resources/jqueryUI/jquery-ui." + themes[t] + ".min.css' rel='stylesheet'></link>");
+        $("head").append("<link href='resources/jqueryUI/themes/" + themes[t] + ".min.css' rel='stylesheet'></link>");
         $("#theme").append("<option>" + themes[t] + "</option>");
     }
     
