@@ -237,7 +237,11 @@ function scrollFn() {
 }
 
 function themeFn() {
+<<<<<<< HEAD
     var themes = ["base-theme", "trontastic", "darkice", "shadowfire", "evilqueen", "swanky"];
+=======
+    var themes = ["base-theme", "trontastic", "darkice", "shadowfire"];
+>>>>>>> parent of cb688a8... swanky and directory mgmt
     var curr = "";
     
     if (!localStorage.getItem("theme")) {
