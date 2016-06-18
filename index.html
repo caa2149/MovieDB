@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"></meta>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <meta name="description" content="a movie database"></meta>
+        <meta name="author" content="christian"></meta>
+        
+        <link rel="icon" href="resources/favicon.ico"></link>
+        
+        <title>Movie DB</title>
+        
+        <!-- Custom styles for this template -->
+        <link href="resources/jqueryUI/jquery-ui.structure.min.css" rel="stylesheet"></link>
+        <link href="resources/jqueryUI/jquery-ui.base-theme.min.css" rel="stylesheet"></link>
+        <link href="resources/jqueryUI/jquery-ui.trontastic.min.css" rel="stylesheet"></link>
+        <link href="resources/jqueryUI/jquery-ui.darkice.min.css" rel="stylesheet"></link>
+        <link href="resources/jqueryUI/jquery-ui.shadowfire.min.css" rel="stylesheet"></link>
+        <link href="resources/jqueryUI/themeAddons.css" rel="stylesheet"></link>
+        <link href="style.css" rel="stylesheet"></link>
+        
+        <!-- Open Sans font from fonts.google.com -->
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600 ' rel='stylesheet' type='text/css'></link>
+        
+    </head>
+    
+    <body><span>
+        
+        <div class="header ui-widget ui-widget-header">
+            <div>
+                <div class="ui-front"><input id="searchT" class="ui-state-default ui-corner-all" type="text" autocomplete="off" placeholder="Search by title"></div>
+                <div class="ui-front"><input id="searchA" class="ui-state-default ui-corner-all" type="text" autocomplete="off" placeholder="Search by actor"></div>
+            </div>
+            
+            <div>
+                <div class="ui-front">
+                    <select id="genre">
+                        <option value="!">Genre</option>
+                        <option value="Action">Action</option>
+                        <option value="Adventure">Adventure</option>
+                        <option value="Animation">Animation</option>
+                        <option value="Biography">Biography</option>
+                        <option value="Comedy">Comedy</option>
+                        <option value="Crime">Crime</option>
+                        <option value="Documentary">Documentary</option>
+                        <option value="Drama">Drama</option>
+                        <option value="Family">Family</option>
+                        <option value="Fantasy">Fantasy</option>
+                        <option value="Film">Film-noir</option>
+                        <option value="Game">Game-show</option>
+                        <option value="History">History</option>
+                        <option value="Horror">Horror</option>
+                        <option value="Music">Music</option>
+                        <option value="Musical">Musical</option>
+                        <option value="Mystery">Mystery</option>
+                        <option value="News">News</option>
+                        <option value="Reality">Reality-tv</option>
+                        <option value="Romance">Romance</option>
+                        <option value="Sci">Sci-Fi</option>
+                        <option value="Sport">Sport</option>
+                        <option value="Talk">Talk-Show</option>
+                        <option value="Thriller">Thriller</option>
+                        <option value="War">War</option>
+                        <option value="Western">Western</option>
+                    </select>
+                </div>
+                <div class="spacer"></div>
+                <div class="ui-front">
+                    <select id="rating">
+                        <option value="!">Rating</option>
+                        <option value="9">9+</option>
+                        <option value="8">8+</option>
+                        <option value="7">7+</option>
+                        <option value="6">6+</option>
+                        <option value="5">5+</option>
+                        <option value="4">4+</option>
+                        <option value="3">3+</option>
+                        <option value="2">2+</option>
+                        <option value="1">1+</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div>
+                <div class="ui-front">
+                    <select id="sort">
+                        <option value="a-z">Sort by</option>
+                        <option value="a-z">A-Z</option>
+                        <option value="z-a">Z-A</option>
+                        <option value="new">Newest first</option>
+                        <option value="old">Oldest first</option>
+                        <option value="high">High rating</option>
+                        <option value="low">Low rating</option>
+                        <option value="recent">Recently added</option>
+                    </select>
+                </div>
+                <div class="spacer"></div>
+                <div><button id="go">Search</button></div>
+            </div>
+        </div>
+        
+        <div class="results ui-widget ui-widget-content"></div>
+        
+        <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+        <script>window.jQuery || document.write('<script src="resources/jquery/jquery-3.0.0.min.js"><\/script>')</script>
+        
+        <script src="resources/jquery/jquery-migrate-3.0.0.min.js"></script>
+        
+        <script src="js/movies.js"></script>
+        <script src="resources/movies/movies.txt"></script>
+        
+        <script src="resources/jqueryUI/jquery-ui.min.js"></script>
+        
+        <!-- Delete this later -->
+        <script src='js/tester.js'></script>
+        
+    </span></body>
+</html>
