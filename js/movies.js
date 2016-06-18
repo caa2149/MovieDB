@@ -237,15 +237,8 @@ function scrollFn() {
 }
 
 function themeFn() {
-<<<<<<< HEAD
-<<<<<<< HEAD
     var themes = ["base-theme", "trontastic", "darkice", "shadowfire", "evilqueen", "swanky"];
-=======
-    var themes = ["base-theme", "trontastic", "darkice", "shadowfire"];
->>>>>>> parent of cb688a8... swanky and directory mgmt
-=======
-    var themes = ["base-theme", "trontastic", "darkice", "shadowfire", "swanky"];
->>>>>>> parent of fdab82c... evil queen
+
     var curr = "";
     
     if (!localStorage.getItem("theme")) {
