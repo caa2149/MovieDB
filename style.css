@@ -88,10 +88,6 @@ button:focus, .ui-selectmenu-button:focus {
     padding:.5em 0;
 }
 
-.notice::after {
-    content:"\1f525";
-}
-
 .movie {
     font-size:0.7rem;
 }
