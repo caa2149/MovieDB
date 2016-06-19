@@ -89,7 +89,7 @@ button:focus, .ui-selectmenu-button:focus {
 }
 
 .notice::after {
-    content:"\1f525";
+    content:"\1f525\1f4a9";
 }
 
 .movie {
