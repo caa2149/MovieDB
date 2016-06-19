@@ -59,11 +59,13 @@ function createMovie(m) {
     return item;
 }
 
-function addUIClass(ele=".results") {
+function addUIClass(ele) {
+    var ele = ele || ".results";
     $(ele).find("p, .poster, .plox").addClass("ui-corner-all");
 }
 
-function loadData(list=allMovies) {
+function loadData(list) {
+    var list = list || allMovies;
     $(".notice").text(list.length + " Movies Found");
     for (m in list) {
         var $m = $("#" + list[m].imdbID);
@@ -87,8 +89,9 @@ function loadData(list=allMovies) {
 }
 
 // happens on page load and every time you click search
-function loadMovies(list=allMovies) {
-    
+function loadMovies(list) {
+    var list = list || allMovies;
+
     $(".results").empty();
     var html = "<div class='notice'></div>";
     for (i in list) { html += createMovie(list[i]); }
@@ -103,14 +106,16 @@ function loadMovies(list=allMovies) {
                       });
 }
 
-function byGenre(g,list=allMovies) {
+function byGenre(g,list) {
+    var list = list || allMovies;
     if (g == "!") { return; }
     for (i in list) {
         if (list[i].Genre.indexOf(g) < 0) {
             $("#" + list[i].imdbID).hide();
         }   }   }
 
-function byRating(r,list=allMovies) {
+function byRating(r,list) {
+    var list = list || allMovies;
     if (r == "!") { return; }
     for (i in list) {
         var rating = list[i].imdbRating;
@@ -118,21 +123,25 @@ function byRating(r,list=allMovies) {
             $("#" + list[i].imdbID).hide();
         }   }   }
 
-function byTitle(s,list=allMovies) {
+function byTitle(s,list) {
+    var list = list || allMovies;
     for (i in list) {
         var contains = list[i].Title.toLowerCase().indexOf(s.toLowerCase());
         if (contains < 0) {
             $("#" + list[i].imdbID).hide();
         }   }   }
 
-function byActor(s,list=allMovies) {
+function byActor(s,list) {
+    var list = list || allMovies;
     for (i in list) {
         var contains = list[i].Actors.toLowerCase().indexOf(s.toLowerCase());
         if (contains < 0) {
             $("#" + list[i].imdbID).hide();
         }   }   }
 
-function mySort(value,r=false,list=allMovies) {
+function mySort(value,r,list) {
+    var r = r || false;
+    var list = list || allMovies;
     
     function sort_by(field, reverse, primer){
         
@@ -177,7 +186,8 @@ function go() {
     $(".notice").text($(".movie:visible").length + " Movies Found");
 }
 
-function jQ_UI_Header(list=allMovies) {
+function jQ_UI_Header(list) {
+    var list = list || allMovies;
     
     $("#go, #topbutton").button();
     $(".header select").selectmenu({ width:200 });
@@ -203,7 +213,8 @@ function jQ_UI_Header(list=allMovies) {
  
 }
 
-function uniqueList(topic,list = allMovies) {
+function uniqueList(topic,list) {
+    var list = list || allMovies;
     var uList = [];
     for (m in list) {
         uList += (list[m][topic]) + ", ";

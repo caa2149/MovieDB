@@ -1,4 +1,5 @@
-function getLongest(property,list=allMovies) {
+function getLongest(property,list) {
+    var list = list || allMovies;
     var largest = [0,"property","imdbID"];
     for (m in list) {
         if (list[m][property].length > largest[0] && list[m].imdbID != "tt3272570") {
@@ -10,7 +11,9 @@ function getLongest(property,list=allMovies) {
     return largest;
 }
 
-function getDistribution(property,ignore=0,list=allMovies) {
+function getDistribution(property,ignore,list) {
+    var ignore = ignore || 0;
+    var list = list || allMovies;
     var types = uniqueList(property);
     var obj = {};
     

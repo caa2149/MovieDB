@@ -196,6 +196,7 @@ button:focus, .ui-selectmenu-button:focus {
 .plot-box *, .specs-box *, .people-box * {
     background-color:#696969;
     padding: 2%;
+    width:100%;
 }
 
 .specs-box, .people-box{
