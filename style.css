@@ -89,7 +89,8 @@ button:focus, .ui-selectmenu-button:focus {
 }
 
 .movie {
-    font-size:0.7rem;
+    font-size:0.5rem;
+    margin:0 2%;
 }
 
 .poster {
